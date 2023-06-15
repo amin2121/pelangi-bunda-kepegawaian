@@ -23,10 +23,10 @@
               let btn_finger = '';
               let finger_temp = '';
               if (item.finger_data == null || item.finger_data == '') {
-                btn_finger = `<button class='btn btn-primary' onclick="user_register(${item.id}, &quot;${item.nama}&quot;); atur_waktu(${item.id}, &quot;${item.nama}&quot;)"><i class='fa fa-bullseye'></i></button>`;
+                btn_finger = `<button class='btn btn-primary btn-sm' onclick="user_register(${item.id}, &quot;${item.nama}&quot;); atur_waktu(${item.id}, &quot;${item.nama}&quot;)"><i class='fa fa-bullseye'></i> Finger</button>`;
                 finger_temp = '0';
-              }else {
-                btn_finger = `<button class='btn btn-primary' onclick="user_register(${item.id}, &quot;${item.nama}&quot;); atur_waktu(${item.id}, &quot;${item.nama}&quot;)"><i class='fa fa-bullseye'></i></button>`;
+              } else {
+                btn_finger = `<button class='btn btn-primary btn-sm' onclick="user_register(${item.id}, &quot;${item.nama}&quot;); atur_waktu(${item.id}, &quot;${item.nama}&quot;)"><i class='fa fa-bullseye'></i> Finger</button>`;
                 finger_temp = '1';
               }
 
@@ -40,7 +40,7 @@
                   <td style="text-align:center;"><code id="user_finger_${item.id}">${finger_temp}</code></td>
                   <td style="text-align: center;">
                     ${btn_finger}
-                    <a href="<?php echo base_url(); ?>pegawai/view_edit/${item.id}"><button type="button" class="btn btn-info btn-sm" name="button"><i class="fa fa-pencil"></i> Edit</button></a>&nbsp;
+                    <a href="<?php echo base_url(); ?>pegawai/view_edit/${item.id}"><button type="button" class="btn btn-info btn-sm" name="button"><i class="fa fa-pencil"></i> Edit</button></a>
                     <button onclick="hapus_pegawai(${item.id})" type="button" class="btn btn-danger btn-sm" name="button"><i class="fa fa-trash"></i> Hapus</button>&nbsp;
                   </td>
                 </tr>
